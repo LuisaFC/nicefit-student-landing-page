@@ -3,7 +3,16 @@ import React from 'react';
 import { FcManager } from 'react-icons/fc';
 import { TextField, Button } from '@material-ui/core';
 
-import { HeaderBox, Logo, Box, Content, Section, SectionForm } from './styles';
+import {
+  HeaderBox,
+  Logo,
+  Box,
+  Content,
+  Section,
+  SectionForm,
+  Footer,
+  Logo2,
+} from './styles';
 import logoImg from '../../assets/Logo.png';
 
 const Landing: React.FC = () => {
@@ -120,6 +129,9 @@ const Landing: React.FC = () => {
           </h3>
         </div>
       </SectionForm>
+      <Footer>
+        <Logo2 src={logoImg} alt="niceFit" />
+      </Footer>
     </>
   );
 };

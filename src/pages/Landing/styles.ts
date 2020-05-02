@@ -138,3 +138,13 @@ export const SectionForm = styled.div`
     margin-top: 25px;
   }
 `;
+
+export const Footer = styled.footer`
+  background: #fff;
+  display: flex;
+`;
+
+export const Logo2 = styled.img`
+  width: 120px;
+  margin: auto;
+`;

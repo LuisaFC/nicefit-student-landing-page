@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { Typography } from '@material-ui/core';
-import { HeaderBox, Logo, Box } from './styles';
+import { FcManager } from 'react-icons/fc';
+
+import { HeaderBox, Logo, Box, Content, Section } from './styles';
 import logoImg from '../../assets/Logo.png';
 
 const Landing: React.FC = () => {
@@ -12,11 +13,14 @@ const Landing: React.FC = () => {
         <p>O mundo está mudando sua academia também!!</p>
       </HeaderBox>
       <Box>
-        <h1>Nossa Academia Virtual</h1>
-        <h3>
-          Da uma olhada nesse vídeo aí do lado, temos uma oportunidade para
-          você!!
-        </h3>
+        <div>
+          <h1>Nossa Academia Virtual!</h1>
+          <h3>
+            Da uma olhada nesse vídeo aí do lado, temos uma oportunidade para
+            você!!
+          </h3>
+        </div>
+
         <iframe
           title="NiceFit"
           src="https://www.youtube.com/embed/Ub7fZQpowFI?autoplay=1rel=0"
@@ -24,6 +28,55 @@ const Landing: React.FC = () => {
           allow="autoplay; accelerometer; encrypted-media; gyroscope; fullscreen; picture-in-picture"
         />
       </Box>
+      <Section>
+        <h2>Por que Treinar com um profissional Qualificado?</h2>
+        <Content>
+          <FcManager size={75} />
+          <p>
+            Todos somos diferentes não é verdade??? Por este motivo o{' '}
+            <strong>SEU</strong> treino tem que ser planejado para VOCÊ!!
+            Pilates, FitDance, Hiit, Funcional, Musculação onde você define a
+            modalidade e horário que mais se adequa a sua necessidade.
+          </p>
+        </Content>
+
+        <Content>
+          <img
+            src="https://img.icons8.com/color/48/000000/laptop--v1.png"
+            alt="notebook"
+          />
+          <p>
+            Você não vai apenas repetir movimentos. Haverá um profissional para
+            acompanhar e corrigir os exercícios de forma online.
+          </p>
+        </Content>
+
+        <Content>
+          <img
+            src="https://img.icons8.com/color/48/000000/expensive-2.png"
+            alt="dollar sign"
+          />
+          <p>
+            Você não vai mais pagar academia sem fazer aula, aqui você
+            administra seus horários com praticidade, economizando tempo e
+            dinheiro.
+          </p>
+        </Content>
+
+        <Content>
+          <img
+            src="https://img.icons8.com/color/48/000000/android.png"
+            alt="phone"
+          />
+          <p>
+            Uma plataforma que facilitará o contato com o seu professor, gerando
+            um rede de relacionamento entre os professores e nossos alunos, tudo
+            isso com preços super acessíveis. Você terá seus resultados
+            acompanhados por um profissional o tempo todo, e serão definidos na
+            primeira aula.
+          </p>
+        </Content>
+      </Section>
     </>
   );
 };

@@ -24,7 +24,60 @@ export const Logo = styled.img`
 `;
 
 export const Box = styled.div`
-  background: #dddddd;
+  background: #06038b;
   width: 100%;
   height: 400px;
+  display: flex;
+
+  div {
+    width: 400px;
+    text-align: center;
+    margin: auto;
+  }
+
+  h1 {
+    font-size: 42px;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  h3 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  iframe {
+    width: 640px;
+    height: 360px;
+    margin: auto;
+  }
+`;
+
+export const Section = styled.div`
+  padding: 90px 2%;
+
+  h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+`;
+
+export const Content = styled.div`
+  width: 25%;
+  text-align: center;
+  float: left;
+  margin-top: 50px;
+  padding-left: 2%;
+  padding-right: 2%;
+
+  p {
+    margin-top: 20px;
+  }
+
+  img {
+    width: 75px;
+  }
 `;

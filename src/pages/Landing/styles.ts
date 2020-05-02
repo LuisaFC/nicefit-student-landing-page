@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const HeaderBox = styled.div`
   background: #ffffff;
@@ -75,9 +75,66 @@ export const Content = styled.div`
 
   p {
     margin-top: 20px;
+    margin-bottom: 80px;
   }
 
   img {
     width: 75px;
+  }
+`;
+
+export const SectionForm = styled.div`
+  background: #1eb909;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  padding: 6%;
+
+  form {
+    margin-left: 8%;
+    display: block;
+    background: #fdfdfd;
+    border-radius: 5%;
+    height: 105%;
+    padding: 2%;
+
+    div {
+      width: 450px;
+
+      & + div {
+        margin-top: 4%;
+      }
+    }
+
+    .btnPosition {
+      margin-left: 50%;
+    }
+
+    .btn {
+      padding-right: 5%;
+      padding-left: 5%;
+      font-size: 16px;
+      font-family: 'Roboto Slab', serif;
+      font-weight: 600;
+    }
+  }
+
+  > div {
+    width: 500px;
+    text-align: center;
+    margin: auto;
+  }
+
+  h1 {
+    font-size: 36px;
+    color: #000;
+    font-weight: 600;
+  }
+
+  h3 {
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 25px;
   }
 `;

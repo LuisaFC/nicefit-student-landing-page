@@ -1,8 +1,9 @@
 import React from 'react';
 
 import { FcManager } from 'react-icons/fc';
+import { TextField, Button } from '@material-ui/core';
 
-import { HeaderBox, Logo, Box, Content, Section } from './styles';
+import { HeaderBox, Logo, Box, Content, Section, SectionForm } from './styles';
 import logoImg from '../../assets/Logo.png';
 
 const Landing: React.FC = () => {
@@ -77,6 +78,48 @@ const Landing: React.FC = () => {
           </p>
         </Content>
       </Section>
+      <SectionForm>
+        <form>
+          <div>
+            <TextField id="outlined-basic" label="Nome" variant="outlined" />
+          </div>
+          <div>
+            <TextField id="outlined-basic" label="E-mail" variant="outlined" />
+          </div>
+          <div>
+            <TextField
+              id="outlined-basic"
+              label="Telefone"
+              variant="outlined"
+              placeholder="(xx) 9xxxx-xxxx"
+              type="number"
+            />
+          </div>
+          <div>
+            <TextField
+              id="outlined-basic"
+              label="Modalidade que gostaria"
+              variant="outlined"
+            />
+          </div>
+          <div className="btnPosition">
+            <Button className="btn" variant="contained" color="primary">
+              Quero participar!
+            </Button>
+          </div>
+        </form>
+        <div>
+          <h1>O Mundo mudou sua academia Também!</h1>
+          <h3>
+            A Nicefit, tem o objetivo de disponibilizar o acesso ao exercício
+            físico onde você estiver, acompanhado e direcionado por um
+            profissional capacitado. Agora você tem a oportunidade de um treino
+            elaborado para você com preços acessíveis, respeitando seus
+            objetivos e particularidades no conforto da sua casa ainda podendo
+            desafiar seus amigos.
+          </h3>
+        </div>
+      </SectionForm>
     </>
   );
 };

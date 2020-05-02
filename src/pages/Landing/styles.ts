@@ -7,18 +7,24 @@ export const HeaderBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-`;
 
-export const Title = styled.h1`
-  color: #06038b;
-  font-family: 'Roboto Slab', serif;
-  font-size: 22px;
-  font-weight: 600;
-  margin-right: 18%;
-  margin-left: 5%;
+  p {
+    color: #06038b;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-right: 22%;
+    margin-left: 5%;
+  }
 `;
 
 export const Logo = styled.img`
-  width: 150px;
-  margin-left: 18%;
+  width: 160px;
+  margin-left: 22%;
+`;
+
+export const Box = styled.div`
+  background: #dddddd;
+  width: 100%;
+  height: 400px;
 `;

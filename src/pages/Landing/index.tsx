@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 
 import { FcManager } from 'react-icons/fc';
 import { TextField, Button } from '@material-ui/core';
@@ -15,7 +15,16 @@ import {
 } from './styles';
 import logoImg from '../../assets/Logo.png';
 
+interface FormData {
+  nome: string;
+  email: string;
+  telefone: string;
+  modalidade: string;
+}
+
 const Landing: React.FC = () => {
+  const handleSubmit = useCallback(async (data: FormData) => {}, []);
+
   return (
     <>
       <HeaderBox>
@@ -90,10 +99,20 @@ const Landing: React.FC = () => {
       <SectionForm>
         <form>
           <div>
-            <TextField id="outlined-basic" label="Nome" variant="outlined" />
+            <TextField
+              id="outlined-basic"
+              label="Nome Completo"
+              variant="outlined"
+              required
+            />
           </div>
           <div>
-            <TextField id="outlined-basic" label="E-mail" variant="outlined" />
+            <TextField
+              id="outlined-basic"
+              label="E-mail"
+              variant="outlined"
+              required
+            />
           </div>
           <div>
             <TextField
@@ -102,6 +121,7 @@ const Landing: React.FC = () => {
               variant="outlined"
               placeholder="(xx) 9xxxx-xxxx"
               type="number"
+              required
             />
           </div>
           <div>
@@ -109,6 +129,7 @@ const Landing: React.FC = () => {
               id="outlined-basic"
               label="Modalidade que gostaria"
               variant="outlined"
+              required
             />
           </div>
           <div className="btnPosition">

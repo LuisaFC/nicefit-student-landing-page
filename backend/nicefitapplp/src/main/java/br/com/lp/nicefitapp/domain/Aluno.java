@@ -53,5 +53,7 @@ public class Aluno implements Serializable {
 	public void setModalidade(String modalidade) {
 		this.modalidade = modalidade;
 	}
+	
+	
 
 }

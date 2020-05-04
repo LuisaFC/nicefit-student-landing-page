@@ -14,11 +14,12 @@ import br.com.lp.nicefitapp.exceptions.ApiError;
 public class ErrorHandlerService {
 
 	@ExceptionHandler(HttpRequestMethodNotSupportedException.class)
-	public ResponseEntity<?> emailAlreadyExists(HttpServletRequest request) {
+	public ResponseEntity<?> methodNotAllowed(HttpServletRequest request) {
 		int status = HttpStatus.METHOD_NOT_ALLOWED.value();
 		String error = "Method Not Allowed";
 		String message = "Request method "+ request.getMethod() + " not supported";
 		ApiError response = new ApiError(status, error, message);
 		return ResponseEntity.status(HttpStatus.METHOD_NOT_ALLOWED).body(response);
 	}
+	
 }

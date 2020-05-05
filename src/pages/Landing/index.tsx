@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { FormEvent, useState, useEffect, useCallback } from 'react';
 
 import { FcManager } from 'react-icons/fc';
 import { TextField, Button } from '@material-ui/core';
@@ -15,15 +15,16 @@ import {
 } from './styles';
 import logoImg from '../../assets/Logo.png';
 
-interface FormData {
-  nome: string;
-  email: string;
-  telefone: string;
-  modalidade: string;
-}
-
 const Landing: React.FC = () => {
-  const handleSubmit = useCallback(async (data: FormData) => {}, []);
+  const [nome, setNome] = useState('');
+  const [mail, setMail] = useState('');
+  const [telefone, setTelefone] = useState('');
+  const [modalidade, setModalidade] = useState('');
+
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+  function handleSubmit() {
+    console.log(nome, mail, telefone, modalidade);
+  }
 
   return (
     <>
@@ -104,6 +105,8 @@ const Landing: React.FC = () => {
               label="Nome Completo"
               variant="outlined"
               required
+              value={nome}
+              onChange={(e) => setNome(e.target.value)}
             />
           </div>
           <div>
@@ -112,6 +115,8 @@ const Landing: React.FC = () => {
               label="E-mail"
               variant="outlined"
               required
+              value={mail}
+              onChange={(e) => setMail(e.target.value)}
             />
           </div>
           <div>
@@ -122,6 +127,8 @@ const Landing: React.FC = () => {
               placeholder="(xx) 9xxxx-xxxx"
               type="number"
               required
+              value={telefone}
+              onChange={(e) => setTelefone(e.target.value)}
             />
           </div>
           <div>
@@ -130,10 +137,17 @@ const Landing: React.FC = () => {
               label="Modalidade que gostaria"
               variant="outlined"
               required
+              value={modalidade}
+              onChange={(e) => setModalidade(e.target.value)}
             />
           </div>
           <div className="btnPosition">
-            <Button className="btn" variant="contained" color="primary">
+            <Button
+              className="btn"
+              variant="contained"
+              color="primary"
+              onClick={handleSubmit}
+            >
               Quero participar!
             </Button>
           </div>

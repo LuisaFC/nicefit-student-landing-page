@@ -13,6 +13,7 @@ import {
   Footer,
   Logo2,
 } from './styles';
+import * as emailjs from 'emailjs-com'
 import logoImg from '../../assets/Logo.png';
 
 const Landing: React.FC = () => {
@@ -23,7 +24,29 @@ const Landing: React.FC = () => {
 
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   function handleSubmit() {
-    console.log(nome, mail, telefone, modalidade);
+    let templateParams = {
+      nome,
+      email: mail,
+      telefone,
+      modalidade,
+      email_to: process.env.REACT_APP_EMAILJS_SENDER,
+    }    
+             
+    emailjs.send(
+      'gmail',
+      String(process.env.REACT_APP_EMAILJS_TEMPLATEID),
+      templateParams,
+      String(process.env.REACT_APP_EMAILJS_USERID)
+    )
+    
+    resetForm()
+  }
+
+  function resetForm() {
+    setNome('');
+    setMail('');
+    setTelefone('');
+    setModalidade('');
   }
 
   return (
